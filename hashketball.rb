@@ -214,16 +214,13 @@ def big_shoe_rebounds
   big_shoe = 0
   game_hash.each do |hash1, hash2|
     hash2[:players].each do |player|
-
-          if player[:shoe] > big_shoe
-            big_shoe = player[:shoe]
-            rebounds = player[:rebounds]
-          end
-          #"rebounds" returns 12.
-        end
-         #"rebounds" returns 2 at this point.
+      if player[:shoe] > big_shoe
+        big_shoe = player[:shoe]
+        rebounds = player[:rebounds]
+      end
     end
-  return rebounds #"rebounds" should return 11.
+  end
+  return rebounds
 end
 
 
